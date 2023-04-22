@@ -411,7 +411,11 @@ body{
 display: flex;
 width:100%;
 background-color:  rgba(21, 59, 56, 0.6);
+
 justify-content: center;
+}
+.icp>a{
+    color: var(--main-color);
 }
 
 @media screen and (max-width : 768px){ 
