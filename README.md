@@ -2,7 +2,7 @@
 # minghes-website
 personalwebsite
 =======
-# my-fist-website
+# my-first-website
 
 ## Project setup
 ```
