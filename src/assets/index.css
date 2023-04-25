@@ -44,7 +44,7 @@ body{
     opacity: 0;
      animation: slideRight 1s ease forwards; 
 }
- .navbar a {
+ .navbar li {
     display: inline-block;
     font-size: 18px;
     color: var(--light-color);
@@ -56,8 +56,8 @@ body{
     animation-delay: calc(.2s * var(--i)); 
  }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar li:hover,
+.navbar li.active {
     color: var(--second-color);
 } 
 .min-icon{
@@ -252,16 +252,6 @@ body{
     opacity: 1;
 }
 
-.icon-r {
-    width: 0px;
-    height: 50px;
-    transition: 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    opacity: 0;
-}
 
 .nav:hover .icon-r {
     width: 60px;
@@ -298,7 +288,6 @@ body{
     margin-bottom:0.5rem;
     color: var(--main-color);
 }
-
 .nav:hover .serve {
     width: 200px;
 }
@@ -319,19 +308,18 @@ body{
 /* ******************main ******************/
  
 .main{
-    width: 70%;
+    width: 75%;
     height: 83%;
     background: rgba(173, 172, 157, 0.6);
     position: fixed;
     top: 10%;
-    left: 25%;
+    left: 20%;
+    padding: 1%;
 	display: flex;
    
     /* z-index: -1;  */
 }
 .display{
-    /* border-right: 2px solid rgba(0, 0, 0, 1); */
-    /* position: relative; */
     width: 50%;
 }
 
@@ -340,10 +328,7 @@ body{
     align-items: center;
     flex-direction: column;
     width: 50%;
-    padding: 1%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: var(--main-color);
 }
 .home>.it{ 

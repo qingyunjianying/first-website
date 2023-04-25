@@ -23,7 +23,8 @@
                 <!-- 上菜单 -->
                 <div class="menu" id="menu">
                     <ul>
-                        <li class="item" v-for="item in menuli" v-bind:key="item.id">
+                        <li class="item" v-for="item in menuLi" v-bind:key="item.id"
+                        @click="onClick(item.enName)">
                             <div class="light"></div>
                             <div class="icon-l">
                                 <i class="fa fa-angellist" aria-hidden="true"></i>	
@@ -41,8 +42,8 @@
                 <!-- 功能区 -->
                 <div class="serve" id="serve">
                     <ul>
-                        <li class="item" v-for="item in navli" v-bind:key="item.id" style="--i:">
-                            <div class="light"></div>
+                        <li class="item" v-for="item in serLi" v-bind:key="item.id" 
+                         @click="onClick(item.enName)">
                             <div class="icon-l">
                                 <i class="fa fa-connectdevelop" aria-hidden="true"></i>
                             </div>
@@ -64,19 +65,24 @@ export default {
     name:'myNav',
     data(){ 
                return{
-                navli: [
-                    { id: 1, name: 'explore' },
-                    { id: 2, name: 'explore' },
-                    { id: 3, name: 'explore' }
+                menuLi: [
+                    { id: 1, name: 'ex1',enName:'vue-menu1'},
+                    { id: 2, name: 'ex2' ,enName:'vue-menu2'},
+                    { id: 3, name: 'ex3',enName:'vue-menu3' }
                 ],
-                menuli: [
-                    { id: 1, name: 'explore' },
-                    { id: 2, name: 'explore' },
-                    { id: 3, name: 'explore' }
+                serLi: [
+                    { id: 1, name: 'explore' ,enName:'vue-serve1'},
+                    { id: 2, name: 'explore' ,enName:'vue-serve2'},
+                    { id: 3, name: 'explore' ,enName:'vue-serve3'}
 
                 ]
                }
-    }
+    },methods:{
+			onClick(enName) {
+				this.active =enName;
+				this.$emit('click', enName)
+			}
+		}
     }
 </script>
 <style>
