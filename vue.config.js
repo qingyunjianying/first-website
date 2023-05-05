@@ -5,6 +5,7 @@ module.exports = defineConfig({
 })
 //打包配置文件
 module.exports = {
+  lintOnSave: false,
   assetsDir: 'static',
   parallel: false,
   publicPath: './',

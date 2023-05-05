@@ -3,9 +3,14 @@
         <div class="main" >
             <div class="display">
                 <div class="watch">
-                    <p class="date">{{date }}</p>
-                    <p class="time">{{time }}</p>
-                    <!-- <p class="text">DIGITAL CLOCK with Vue.js</p> -->
+                    <!-- <my-calender></my-calender> -->
+                    <welcome-ban></welcome-ban>
+                    <!-- <my-clock></my-clock> -->
+                    <!-- <my-music></my-music> -->
+                </div>
+                <div class="watch2">
+                    <my-move></my-move>
+                    <my-clock></my-clock>
                 </div>
                 <div class="banner">
                     <div class="b-icon"></div>
@@ -34,8 +39,23 @@
     </div>
 </template>
 <script>
+import MyMove from '../view/Move.vue';
+import MyClock from '../view/Clock.vue';
+// import MyCalender from './MyCalendar/VueCalendar.vue'
+import WelcomeBan from './MyCalendar/WelcomeBan.vue';
+// import MyClock from './MyCalendar/MyClock.vue';
+// import MyMusic from './MyCalendar/MyMusic.vue';
+
+
 export default {
     name: 'myHome',
+    components:{
+        // MyCalender,
+            WelcomeBan,
+            MyClock,
+            // MyMusic
+            MyMove
+    },
     data(){
             return{
                 list: [
@@ -45,8 +65,8 @@ export default {
                         { id: 4, name: '留言板',index: 6 }
                     ],
                     typingTexts: [
-                            "祝彩云生日快乐哦",
-                            "亲爱的，我爱你",
+                            // "祝生日快乐哦",
+                            // "亲爱的，我爱你",
                             "梁山伯：英台不是女儿身，因何耳上有环痕",
                             "祝英台：耳环痕有原因，梁兄何必起疑云",
                             "村里酬神多庙会，年年由我扮观音",
@@ -56,12 +76,28 @@ export default {
                             "爱丽丝：因为乌鸦长得像写字台",
                             "疯帽子：为什么乌鸦长得像写字台？",
                             "爱丽丝：因为我喜欢你没有理由"
-                            ]
+                            ],
             }
                    
          }
 }
 </script>
-<style>
+<style scoped>
+.display{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.display>.watch2{
+    display: flex;
+    justify-content: space-around;
 
+}
+@media screen and (max-width: 768px){
+	.clock{
+		display: none;
+	}
+}
 </style>

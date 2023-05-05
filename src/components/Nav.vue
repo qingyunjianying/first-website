@@ -23,7 +23,7 @@
                 <!-- 上菜单 -->
                 <div class="menu" id="menu">
                     <ul>
-                        <li class="item" v-for="item in menuLi" v-bind:key="item.id"
+                        <!-- <li class="item" v-for="item in menuLi" v-bind:key="item.id"
                         @click="onClick(item.enName)">
                             <div class="light"></div>
                             <div class="icon-l">
@@ -31,8 +31,30 @@
                             </div>
                             <div class="con nav_link">{{item.name}}</div>
                             
+                        </li> -->
+                        <li class="item">
+                            <div class="light"></div>
+                            <div class="icon-l">
+                                <i class="fa fa-angellist" aria-hidden="true"></i>	
+                            </div>
+                            <div class="con nav_link">example</div>
+                            <!-- <router-link :to="{name:'menu1'}"></router-link> -->
                         </li>
-
+                        <li class="item">
+                            <div class="light"></div>
+                            <div class="icon-l">
+                                <i class="fa fa-angellist" aria-hidden="true"></i>	
+                            </div>
+                            <div class="con nav_link">example</div>
+                        </li>
+                        <li class="item">
+                            <div class="light"></div>
+                            <div class="icon-l">
+                                <i class="fa fa-angellist" aria-hidden="true"></i>	
+                            </div>
+                            <div class="con nav_link">example</div>
+                        </li>
+                        <!-- <router-view></router-view> -->
                     </ul>
                 </div>
                 <div class="line"></div>
@@ -42,12 +64,23 @@
                 <!-- 功能区 -->
                 <div class="serve" id="serve">
                     <ul>
-                        <li class="item" v-for="item in serLi" v-bind:key="item.id" 
-                         @click="onClick(item.enName)">
+                        <li class="item">
                             <div class="icon-l">
                                 <i class="fa fa-connectdevelop" aria-hidden="true"></i>
                             </div>
-                            <div class="con  nav_link">{{item.name}}</div>
+                            <div class="con nav_link">example</div>
+                        </li>
+                        <li class="item">
+                            <div class="icon-l">
+                                <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+                            </div>
+                            <div class="con nav_link">example</div>
+                        </li>
+                        <li class="item">
+                            <div class="icon-l">
+                                <i class="fa fa-connectdevelop" aria-hidden="true"></i>
+                            </div>
+                            <div class="con nav_link">example</div>
                         </li>
 
                     </ul>
@@ -62,27 +95,27 @@
 </template>
 <script>
 export default {
-    name:'myNav',
-    data(){ 
-               return{
-                menuLi: [
-                    { id: 1, name: 'ex1',enName:'vue-menu1'},
-                    { id: 2, name: 'ex2' ,enName:'vue-menu2'},
-                    { id: 3, name: 'ex3',enName:'vue-menu3' }
-                ],
-                serLi: [
-                    { id: 1, name: 'explore' ,enName:'vue-serve1'},
-                    { id: 2, name: 'explore' ,enName:'vue-serve2'},
-                    { id: 3, name: 'explore' ,enName:'vue-serve3'}
+    // name:'myNav',
+    // data(){ 
+    //            return{
+    //             menuLi: [
+    //                 { id: 1, name: 'ex1',enName:'vue-menu1'},
+    //                 { id: 2, name: 'ex2' ,enName:'vue-menu2'},
+    //                 { id: 3, name: 'ex3',enName:'vue-menu3' }
+    //             ],
+    //             serLi: [
+    //                 { id: 1, name: 'explore' ,enName:'vue-serve1'},
+    //                 { id: 2, name: 'explore' ,enName:'vue-serve2'},
+    //                 { id: 3, name: 'explore' ,enName:'vue-serve3'}
 
-                ]
-               }
-    },methods:{
-			onClick(enName) {
-				this.active =enName;
-				this.$emit('click', enName)
-			}
-		}
+    //             ]
+    //            }
+    // },methods:{
+	// 		onClick(enName) {
+	// 			this.active =enName;
+	// 			this.$emit('click', enName)
+	// 		}
+	// 	}
     }
 </script>
 <style>
