@@ -1,9 +1,9 @@
 <template>
     <div class="header-wrap">
-        <div  class="min-icon" >
+        <div  class="min-icon" @click="openNav()">
             <img src="../assets/person.jpg" alt="icon" />
         </div>
-        <div class="header" id="nav-menu">
+        <div :class="{'header':true,'header_sm':open}" id="nav-menu" >
             <a href="#" class="logo">MingHe</a>
             <ul class="navbar">
                 <!-- <li v-for="item in navList" :key="item.name" 
@@ -22,7 +22,8 @@
                     <router-link :to="{name:'Portfolio'}">Portfolio</router-link></li>
                 <li class="nav-item" style="--i:5">
                     <router-link :to="{name:'Contact'}">Contact</router-link></li>
-                <div class="nav-s">X</div>
+                <li class="nav-s" @click="close()">
+                    <i class="el-icon-error"></i></li>
             </ul>
         </div>
         <!-- <div>
@@ -35,16 +36,17 @@
 
 export default {
     data() {
-    return { open: false }
-  },
-  computed: {
-    isFolder() {
-      return this.treeData.children && this.treeData.children.length > 0;
+    return { 
+        open: false
     }
   },
   methods: {
-    toggle() {
-      if (this.isFolder) this.open = !this.open;
+    close(){
+        // alert("aaaa")
+        this.open = true;
+    },
+    openNav(){
+        this.open = false;
     }
   }
     // data(){
@@ -82,4 +84,9 @@ a{
     position: fixed;
     top: 0;
 } 
+.router-link-exact-active{
+    color: var(--second-color);
+}
+
+
 </style>

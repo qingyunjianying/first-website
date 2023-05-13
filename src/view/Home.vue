@@ -40,7 +40,7 @@
 </template>
 <script>
 import MyMove from '../view/Move.vue';
-import MyClock from '../view/Clock.vue';
+import MyClock from '../view/MyCalendar/Clock.vue';
 // import MyCalender from './MyCalendar/VueCalendar.vue'
 import WelcomeBan from './MyCalendar/WelcomeBan.vue';
 // import MyClock from './MyCalendar/MyClock.vue';
@@ -83,6 +83,7 @@ export default {
 }
 </script>
 <style scoped>
+
 .display{
     position: relative;
     display: flex;
@@ -92,12 +93,25 @@ export default {
 }
 .display>.watch2{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
 }
+.h-con:hover{
+     transform: translateY(0.25rem);
+}
 @media screen and (max-width: 768px){
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 	.clock{
 		display: none;
 	}
+    .watch2{
+        position: relative;
+        
+    }.banner{
+        width: 100px;
+    }
 }
 </style>

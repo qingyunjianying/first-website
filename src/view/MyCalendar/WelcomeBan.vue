@@ -52,7 +52,7 @@ export default {
     height: 60px;
     text-align: center;
     line-height: 60px;
-    font-size: 54px;
+    font-size: 2.7rem;
     font-weight: 900;
     /* 斜体 */
     font-style: italic;

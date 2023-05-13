@@ -1,6 +1,6 @@
 .<template>
     <div class="move">
-        <lottie :options="defaultOptions" :height="200" :width="200" v-on:animCreated="handleAnimation" />
+        <lottie :options="defaultOptions" :height="120" :width="120" v-on:animCreated="handleAnimation" />
     </div>
 
 </template>
@@ -29,9 +29,11 @@ methods: {
 </script>
 
 <style scoped>
-.move{
-    height: 200px;
-    width: 200px;
-}
 
+@media screen and (max-width: 768px){
+.move{
+    height: 120px;
+    width: 120px;
+}
+}
 </style>

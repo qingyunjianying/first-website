@@ -37,22 +37,28 @@
                             <div class="icon-l">
                                 <i class="fa fa-angellist" aria-hidden="true"></i>	
                             </div>
-                            <div class="con nav_link">example</div>
-                            <!-- <router-link :to="{name:'menu1'}"></router-link> -->
+                            <div class="con nav_link">
+                                 <router-link :to="{name:'menu1'}">aaaa</router-link>
+                            </div>
+                            <!-- <div class="con nav_link">example</div> -->
                         </li>
                         <li class="item">
                             <div class="light"></div>
                             <div class="icon-l">
                                 <i class="fa fa-angellist" aria-hidden="true"></i>	
                             </div>
-                            <div class="con nav_link">example</div>
+                            <div class="con nav_link">
+                                 <router-link :to="{name:'menu2'}">aaaa</router-link>
+                            </div>
                         </li>
                         <li class="item">
                             <div class="light"></div>
                             <div class="icon-l">
                                 <i class="fa fa-angellist" aria-hidden="true"></i>	
                             </div>
-                            <div class="con nav_link">example</div>
+                            <div class="con nav_link">
+                                 <router-link :to="{name:'menu3'}">example</router-link>
+                            </div>
                         </li>
                         <!-- <router-view></router-view> -->
                     </ul>
@@ -68,19 +74,25 @@
                             <div class="icon-l">
                                 <i class="fa fa-connectdevelop" aria-hidden="true"></i>
                             </div>
-                            <div class="con nav_link">example</div>
+                            <div class="con nav_link">
+                                 <router-link :to="{name:'serve'}">example</router-link>
+                            </div>
                         </li>
                         <li class="item">
                             <div class="icon-l">
                                 <i class="fa fa-connectdevelop" aria-hidden="true"></i>
                             </div>
-                            <div class="con nav_link">example</div>
+                            <div class="con nav_link">
+                                 <router-link :to="{name:'serve2'}">example</router-link>
+                            </div>
                         </li>
                         <li class="item">
                             <div class="icon-l">
                                 <i class="fa fa-connectdevelop" aria-hidden="true"></i>
                             </div>
-                            <div class="con nav_link">example</div>
+                            <div class="con nav_link">
+                                 <router-link :to="{name:'serve3'}">example</router-link>
+                            </div>
                         </li>
 
                     </ul>
