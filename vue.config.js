@@ -8,7 +8,7 @@ module.exports = {
   lintOnSave: false,
   assetsDir: 'static',
   parallel: false,
-  publicPath: './',
+  publicPath: '/',
   chainWebpack: config => {
     config
       .plugin('html')

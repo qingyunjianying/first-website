@@ -1,5 +1,5 @@
 <template>
-    <div id="main">
+    <div id="myHome">
         <div class="main" >
             <div class="display">
                 <div class="watch">
